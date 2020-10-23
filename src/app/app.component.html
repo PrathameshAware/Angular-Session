@@ -1,0 +1,17 @@
+<pxb-drawer [open]="showDrawer">
+  <pxb-drawer-header title="Demo App" subtitle="For session purpose">
+    <button pxb-icon mat-icon-button (click)="drawerToggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </pxb-drawer-header>
+  <pxb-drawer-body>
+    <pxb-drawer-nav-group>
+      <pxb-drawer-nav-item *ngFor="let navItem of navItems" [title]="navItem.title">
+        <mat-icon pxb-icon>{{ navItem.icon }}</mat-icon>
+      </pxb-drawer-nav-item>
+    </pxb-drawer-nav-group>
+  </pxb-drawer-body>
+  <pxb-drawer-footer divider="true">
+    <i class="pxb-eaton eaton-logo"></i>
+  </pxb-drawer-footer>
+</pxb-drawer>
